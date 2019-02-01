@@ -1,0 +1,20 @@
+[
+
+    {
+        "id" : 1,
+        "title" : "Technische Hochschule Brandeburg",
+        "body" : "<h1>this is an html body text</h1>",
+        "category": [ "Bootstrap", "Html/Css", "jQuery", "Mobile"], 						 
+        "image" : "assets/img/details/technische-hochschule-brandeburg-detail.jpg",
+        "thumb": "assets/img/thb_home.jpg"
+    },
+    {
+        "id" : 2,
+        "title" : "Delivery Hero GmbH",
+        "body" : "<h1>this is an html body text</h1>",
+        "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
+        "image" : "assets/img/details/dh_detail.jpg",
+        "thumb": "assets/img/deliveryhero_home.jpg"
+    }
+        
+]

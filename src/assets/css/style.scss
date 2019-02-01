@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css?family=Krub:400,500,700');
+
+*,*:before, *:after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color: #bd0909;
+}
+
+#app {
+    font-family: 'Krub', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #999;
+  }
+#nav {
+    display: flex;  
+    justify-content: center;
+    padding: 30px;
+    a{
+      color: #999;
+      font-size: 1.8em;
+      transition: color 0.3s ease-in;
+      &.router-link-exact-active {
+        color: #bd0909;
+      }
+      &:hover{
+        color: #bd0909;
+      }
+      &:not(:last-child){
+            padding-right: 3em
+        }
+    }
+}
+
+.logo{
+    a{
+        display: flex;
+    }
+    h1{
+        font-weight: 700;
+        font-size: 3em;
+        &:not(:last-child){
+            padding-right: 0.5em;
+        }
+        &:nth-child(1){
+            color: brown;
+        }
+        &:nth-child(2){
+            color: #666;
+        }
+    }
+}  
+
+header, .content{
+    padding: 2em;
+}
+
+.content{
+    width: 94%;
+    margin: 2em 0 5em 0;
+    min-height: 400px;
+}
+
+.post-area .post {
+    width: 270px;
+}
+
+@media only screen and (min-width: 480px) {
+	.card-main{
+		perspective:1500px;
+	}
+	.card-main:hover .flip{
+		transform: rotateY(180deg);
+	}
+	.card-main,
+	.front,
+	.back {
+	  width: 100%;
+	  height: 570px;
+	}
+
+	.flip {
+	  transition: 0.6s;
+	  transform-style: preserve-3d;
+	  position: relative;
+	}
+
+	.front,
+	.back {
+	  backface-visibility: hidden;
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	}
+
+	.front {
+	  z-index: 2;
+	  transform: rotateY(0deg);
+	}
+
+	.back {
+	  transform: rotateY(180deg);
+	}
+}
+
+.card{
+	border-right: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
+    border-radius: 7px 7px 7px 7px;
+}
+
+.post-area {
+	display:flex;
+	flex-flow:wrap;
+}
+
+.form{
+    width: 50%;
+    margin: 0 auto;
+    > div {
+        margin-bottom: 2em;
+    }
+}
+
+input, textarea {
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    padding: 1em;
+    font-size: 1em;
+    width: 100%;
+    color: #999;
+    outline: none;
+}
+
+.about {
+    h1{
+        color: #666;
+        margin: 2em 0 0.5em 0;
+        &:first-child{margin-top:0}
+    }
+    p{
+        margin: 0.3em 0;
+        font-size: 1.2em;
+    }
+    ul{padding:0}
+    li{
+        list-style: none;
+        margin-bottom: 0.5em
+    }
+}
+
+.mobile-toggle{
+    position: absolute;
+    top: 3em;
+    right: 2em;
+    width: 25px;
+    height: 35px;
+    cursor: pointer;
+    span, span:before, span:after{
+        width: 30px;
+        height: 6px;
+        background-color: #000;
+        display: block;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+    }
+    span {
+        margin: 0 auto;
+        position: relative;
+        top: 12px;
+
+        &:before, &:after{
+            position: absolute;
+            content: '';
+        }
+        &:before{
+            margin-top: -12px;   
+            -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+            -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+            -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s; 
+        }
+        &:after{
+            margin-top: 12px;
+            -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
+            -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
+            -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;    
+        }
+        -webkit-transition-duration: 0s; transition-duration: 0s;
+	    -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+    }
+    &.open span{
+        background-color: rgba(0,0,0,0.0);
+	    -webkit-transition-delay: 0.1s; transition-delay: 0.1s;    
+    }
+    &.open span::before{
+        margin-top: 0;
+        -webkit-transform: rotate(45deg); transform: rotate(45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+    }
+    &.open span::after{
+        margin-top: 0;
+        -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
+        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+    }
+}
+
+
+
