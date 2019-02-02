@@ -1,6 +1,6 @@
 <template>
     <div class="post-area">
-        <Card v-for="work in works" v-bind:work="work" v-bind:key="work.id"></Card>
+        <Card v-for="work in works" v-bind:work="work" v-bind:key="work.id"></Card> 
     </div>
 </template>
 

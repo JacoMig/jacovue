@@ -10,11 +10,18 @@
      <div class="mobile-toggle" @click="toggleOpen">
         <span></span>
       </div>
-     <Navigation />
+      <div id="nav">
+        <Navigation />
+      </div>
+      <div id="nav__mobile">
+        <Navigation />
+      </div>
     </header>
     <div class="content">
       <transition name="fade" mode="out-in">
-        <router-view/>
+        <keep-alive>
+          <router-view/>
+        </keep-alive>
       </transition>
     </div>
     <Footer />
@@ -34,6 +41,8 @@ export default {
     toggleOpen(event){
       const toggle =  document.querySelector('.mobile-toggle')
       toggle.classList.toggle('open')
+      document.querySelector('#nav__mobile').classList.toggle('open')
+      /* document.querySelector('#nav').classList.toggle('close') */
     }
   }
 }

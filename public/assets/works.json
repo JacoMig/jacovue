@@ -15,6 +15,22 @@
         "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
         "image" : "assets/img/details/dh_detail.jpg",
         "thumb": "assets/img/deliveryhero_home.jpg"
+    },
+    {
+        "id" : 3,
+        "title" : "Delivery Hero GmbH",
+        "body" : "<h1>this is an html body text</h1>",
+        "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
+        "image" : "assets/img/details/dh_detail.jpg",
+        "thumb": "assets/img/deliveryhero_home.jpg"
+    },
+    {
+        "id" : 4,
+        "title" : "Delivery Hero GmbH",
+        "body" : "<h1>this is an html body text</h1>",
+        "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
+        "image" : "assets/img/details/dh_detail.jpg",
+        "thumb": "assets/img/deliveryhero_home.jpg"
     }
         
 ]

@@ -1,5 +1,5 @@
 <template>
-    <div class="post card-main">
+     <div class="post card-main">
         <div class="flip">
             <div class="front card">
                 <div class="post-thumb">

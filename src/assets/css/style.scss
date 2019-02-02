@@ -25,6 +25,7 @@ a{
     display: flex;  
     justify-content: center;
     padding: 30px;
+    display: block;
     a{
       color: #999;
       font-size: 1.8em;
@@ -36,7 +37,7 @@ a{
         color: #bd0909;
       }
       &:not(:last-child){
-            padding-right: 3em
+            margin-right: 3em
         }
     }
 }
@@ -46,7 +47,7 @@ a{
         display: flex;
     }
     h1{
-        font-weight: 700;
+        font-weight: 400;
         font-size: 3em;
         &:not(:last-child){
             padding-right: 0.5em;
@@ -66,12 +67,24 @@ header, .content{
 
 .content{
     width: 94%;
-    margin: 2em 0 5em 0;
+    margin: 2em auto 5em auto;
     min-height: 400px;
 }
 
-.post-area .post {
-    width: 270px;
+
+.post-area {
+    display:flex;
+    flex-flow:wrap;
+    justify-content: space-between;
+    .post {
+        width: 270px;
+        margin-bottom: 2em;
+        height: 550px;
+        transition: all 0.3s ease-in;
+        .post-thumb img{
+            width:100%
+        }
+    }
 }
 
 @media only screen and (min-width: 480px) {
@@ -85,7 +98,7 @@ header, .content{
 	.front,
 	.back {
 	  width: 100%;
-	  height: 570px;
+	  height: 550px;
 	}
 
 	.flip {
@@ -116,12 +129,9 @@ header, .content{
 	border-right: 1px solid #dbdbdb;
     border-bottom: 1px solid #dbdbdb;
     border-radius: 7px 7px 7px 7px;
-}
+    overflow: hidden;
+} 
 
-.post-area {
-	display:flex;
-	flex-flow:wrap;
-}
 
 .form{
     width: 50%;
@@ -139,6 +149,34 @@ input, textarea {
     width: 100%;
     color: #999;
     outline: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+textarea {
+    height: 30em;
+}
+
+.btn{
+    background: #bd0909;
+    padding: 1em;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border:none;
+    color:white;
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.btn:hover{
+    transform: scale(1.2,1.2);
+}
+
+input:focus, textarea:focus{
+    transform: scale(1.1,1.1);
 }
 
 .about {
@@ -159,7 +197,9 @@ input, textarea {
 }
 
 .mobile-toggle{
+    display: none;
     position: absolute;
+    z-index:200;
     top: 3em;
     right: 2em;
     width: 25px;
@@ -186,33 +226,115 @@ input, textarea {
         &:before{
             margin-top: -12px;   
             -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-            -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
-            -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s; 
+            -webkit-transition-duration: 0.1s; transition-duration: 0.1s;
+            -webkit-transition-delay: 0.1s, 0s; transition-delay: 0.1s, 0s; 
         }
         &:after{
             margin-top: 12px;
             -webkit-transition-property: margin, -webkit-transform; transition-property: margin, transform;
-            -webkit-transition-duration: 0.2s; transition-duration: 0.2s;
-            -webkit-transition-delay: 0.2s, 0s; transition-delay: 0.2s, 0s;    
+            -webkit-transition-duration: 0.1s; transition-duration: 0.1s;
+            -webkit-transition-delay: 0.1s, 0s; transition-delay: 0.1s, 0s;    
         }
-        -webkit-transition-duration: 0s; transition-duration: 0s;
-	    -webkit-transition-delay: 0.2s; transition-delay: 0.2s;
+        -webkit-transition-duration: 0.1s; transition-duration: 0.1s;
+	    -webkit-transition-delay: 0.1s; transition-delay: 0.1s;
     }
     &.open span{
         background-color: rgba(0,0,0,0.0);
-	    -webkit-transition-delay: 0.1s; transition-delay: 0.1s;    
+	    -webkit-transition-delay: 0.0.5s; transition-delay: 0.0.5s;    
     }
     &.open span::before{
         margin-top: 0;
         -webkit-transform: rotate(45deg); transform: rotate(45deg);
-        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+        -webkit-transition-delay: 0s, 0.1s; transition-delay: 0s, 0.1s;
     }
     &.open span::after{
         margin-top: 0;
         -webkit-transform: rotate(-45deg); transform: rotate(-45deg);
-        -webkit-transition-delay: 0s, 0.2s; transition-delay: 0s, 0.2s;
+        -webkit-transition-delay: 0s, 0.1s; transition-delay: 0s, 0.1s;
+    }
+    &:hover span, &:hover span:after, &:hover span:before{
+        transition-timing-function: cubic-bezier(.57,-0.01,.31,1.6);
+        -webkit-transition-timing-function: cubic-bezier(.57,-0.01,.31,1.6);
+        transition-delay: 0s;
+        -webkit-transition-delay: 0s;
+    }
+    &:hover span{
+        transform: scale(0.8,0.8)
+    }
+
+    &:hover span:after{
+        margin-top: 8px;
+    }
+    &:hover span:before{
+        margin-top: -8px;
     }
 }
 
+#nav__mobile{
+    background: rgba(256,256,256,0);
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index:-100;
+    transition: background 0.3s ease-in;
+    span{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height:100%;
+        a{
+            font-size: 3em;
+            opacity:0;
+            visibility: hidden;
+            margin-bottom: 1em;
+            color: #999;
+            transition: color 0.3s ease-in;
+            &.router-link-exact-active {
+              color: #bd0909;
+            }
+            &:hover{
+              color: #bd0909;
+            }
+        }
+    }
+}
 
+@media only screen and (max-width: 800px) {
+    .mobile-toggle{display:block;}
+    #nav{display:none;}
+    #nav__mobile.open{
+        z-index:100;
+        background: rgba(256,256,256,0.85);
+        a{
+            animation: mobileMenuFade 0.3s ease-in forwards;
+            &:nth-child(1){
+                animation-delay: 0.3s;
+            }
+            &:nth-child(2){
+                animation-delay: 0.5s
+            }
+            &:nth-child(3){
+                animation-delay: 0.7s
+            }
+            &:not(:last-child) {
+               margin-right:0;
+           }
+        }
+        .background{
+            background: rgba(256,256,256, 0.85);
+        }
+    }
+}
 
+@keyframes mobileMenuFade{
+    from{
+        opacity: 0
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
