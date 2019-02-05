@@ -3,7 +3,12 @@
     {
         "id" : 1,
         "title" : "Technische Hochschule Brandeburg",
-        "body" : "<h1>this is an html body text</h1>",
+        "body" : {
+            "description" : "Lead Front End Developer. Full implementation of the website based on given Layouts. Mobile customization.",
+            "client" : "Sunbeam Communications, Berlin",
+            "when" : "from Mai 2016 until September 2016",
+            "link" : "https://www.th-brandenburg.de"
+        },
         "category": [ "Bootstrap", "Html/Css", "jQuery", "Mobile"], 						 
         "image" : "assets/img/details/technische-hochschule-brandeburg-detail.jpg",
         "thumb": "assets/img/thb_home.jpg"
@@ -11,26 +16,80 @@
     {
         "id" : 2,
         "title" : "Delivery Hero GmbH",
-        "body" : "<h1>this is an html body text</h1>",
+        "body" : {
+            "description" : "Lead Front End Developer. Full implementation of the Career Portal for company Delivery Hero . The website is based on WordPress template was completed by php rebuilt . Calling current jobs on the Jobvite API and filtered by AngularJS . Animations with jQuery, Responsive behavior on Bootstrap Framework. Backend structured according to customer requirements.",
+            "client" : "Delivery Hero Holding Company GmbH, Berlin",
+            "when" : "from May 2014 until September 2014",
+            "link" : "http://career.deliveryhero.com/"
+        },
         "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
         "image" : "assets/img/details/dh_detail.jpg",
         "thumb": "assets/img/deliveryhero_home.jpg"
     },
     {
         "id" : 3,
-        "title" : "Delivery Hero GmbH",
-        "body" : "<h1>this is an html body text</h1>",
-        "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
-        "image" : "assets/img/details/dh_detail.jpg",
-        "thumb": "assets/img/deliveryhero_home.jpg"
+        "title" : "Juwelier.at",
+        "body" : {
+            "description" : "Lead Front End Developer. Full implementation of the website based on given Layouts. Mobile customization.",
+            "client" : "Fastlane GmbH, Altenburg",
+            "when" : "from November 2015 until March 2016",
+            "link" : "http://www.juwelier.at/"
+        },
+        "category": [ "Bootstrap", "Html/Css", "jQuery", "Mobile", "PHP"], 						 
+        "image" : "assets/img/details/juwelier-at-detail.jpg",
+        "thumb": "assets/img/juwelier_home.jpg"
     },
     {
         "id" : 4,
-        "title" : "Delivery Hero GmbH",
-        "body" : "<h1>this is an html body text</h1>",
-        "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
-        "image" : "assets/img/details/dh_detail.jpg",
-        "thumb": "assets/img/deliveryhero_home.jpg"
+        "title" : "Z2X",
+        "body" : {
+            "description" : "WordPress Plugin. Multipages registration form. The user once is logged in can register himself for an Event. The form has 4 steps at the end of the process the user receives a confirmation email and all the data has been saved in the database.",
+            "client" : "Stylestore GmbH, Berlin",
+            "when" : "Februar 2017",
+            "link" : "https://z2x.zeit.de/register"
+        },
+        "category": [ "Html/Css", "Javascript", "PHP", "Wordpress"], 						 
+        "image" : "assets/img/details/z2x-detail.jpg",
+        "thumb": "assets/img/z2x_home.jpg"
+    },
+    {
+        "id" : 5,
+        "title" : "Digiden GmbH",
+        "body" : {
+            "description" : "Lead Front End Developer. Full implementation of the website based on given Layouts. Conversion of standard Typo3 Template with Typoscript / HTML / CSS3 / jQuery. Attachment of new features such as pictures Slides, News Archive categories based the work of the customer… Mobile customization.",
+            "client" : "Digiden GmbH, Berlin",
+            "when" : "from 2013 until 2014",
+            "link" : "http://www.digiden.de/"
+        },
+        "category": [ "Html/Css", "jQuery", "Typo3" ], 						 
+        "image" : "assets/img/details/digiden_detail.jpg",
+        "thumb": "assets/img/digiden_home.jpg"
+    },
+    {
+        "id" : 6,
+        "title" : "Ultras-Art",
+        "body" : {
+            "description" : "Relaunch of an oxid shop website. Full CSS / HTML customization, small smarty php customizations",
+            "client" : "Fastlane GmbH, Altenburg",
+            "when" : "May 2018",
+            "link" : "www.ultras-art.com/"
+        },
+        "category": [ "Html/Css", "Bootstrap", "jQuery", "Mobile", "Oxid" ], 						 
+        "image" : "assets/img/details/ultras-art-detail.jpg",
+        "thumb": "assets/img/ultras_home.jpg"
+    },
+    {
+        "id" : 7,
+        "title" : "Motioncomposer",
+        "body" : {
+            "description" : "Lead Front End Developer. Full implementation of the website based on given Layouts. Conversion of standard WordPress template with HTML5 / CSS3 / PHP / jQuery. Logical Structure of the content in the backend to wishes of the customer. Attachment and adjustment of the Plugins shape and Donate. Mobile customization.",
+            "client" : "Motion Composer, Weimar",
+            "when" : "from November 2013 until February 2014",
+            "link" : "http://www.motioncomposer.com/"
+        },
+        "category": [ "Html/Css", "Bootstrap", "PHP", "Mobile", "Wordpress" ], 						 
+        "image" : "assets/img/details/mcomposer_detail.jpg",
+        "thumb": "assets/img/mcomposer_home.jpg"
     }
         
 ]

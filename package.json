@@ -12,11 +12,11 @@
   },
   "devDependencies": {
     "@vue/cli-service": "^3.4.0",
+    "aos": "^2.3.4",
     "axios": "^0.18.0",
     "node-sass": "^4.9.0",
     "nprogress": "^0.2.0",
     "sass-loader": "^7.1.0",
-    "vue-jsonp": "^0.1.8",
     "vue-masonry": "^0.11.7",
     "vue-template-compiler": "^2.5.21"
   }

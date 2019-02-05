@@ -1,5 +1,5 @@
 <template>
-     <div class="post card-main">
+     <div class="post card-main" data-aos="fade-in" data-aos-ease="ease-in-out" daat-aos-duration="1500">
         <div class="flip">
             <div class="front card">
                 <div class="post-thumb">
@@ -10,9 +10,9 @@
             <div class="back card">
                 <h1>{{work.title}}</h1>
                 <div class="post-category">{{work.category.join(', ')}}</div>
-                <router-link to="/works/:id">Go to Project</router-link>
+                <router-link to="/works/:id" class="btn">Go to Project</router-link>
             </div>    
-        </div>    
+        </div>   
     </div>
 </template>
  <script>

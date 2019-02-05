@@ -1,15 +1,20 @@
 <?php
-$nachricht = "Zeile 1\r\nZeile 2\r\nZeile 3";
+/*header('Content-Type: application/json');*/
+/*header('Access-Control-Allow-Origin : *');*/
+$Subject = $_POST['subject'];
+$Message = $_POST['message'];
+$NameFrom = $_POST['name'];
+$EmailFrom = $_POST['email'];
 
-$Betreff = $_POST['name'];
+$headers = 'From: '. $NameFrom . "\r\n" .
+    'Reply-To: ' . $EmailFrom . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
 
-$nachricht = wordwrap($nachricht, 70, "\r\n");
 
-// Verschicken
-$obj = new stdObject();
+$Message = wordwrap($Message, 70, "\r\n");
 
-if(mail('jacomig@gmail.com', $Betreff, $nachricht)){
-    $obj->name = "Success";
-    echo $obj;
+
+if(mail('jacomig@gmail.com', $Subject, $Message, $headers)){
+    echo "Thank you ".$NameFrom." for your message! I will contact you as soon as possible.";
 }
 ?>

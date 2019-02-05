@@ -44,7 +44,14 @@ export default {
       document.querySelector('#nav__mobile').classList.toggle('open')
       /* document.querySelector('#nav').classList.toggle('close') */
     }
+  },
+  watch: {
+    '$route' (to, from) {
+       document.querySelector('#nav__mobile').classList.remove('open')
+       document.querySelector('.mobile-toggle').classList.remove('open')
+    }
   }
+  
 }
 </script>
 
