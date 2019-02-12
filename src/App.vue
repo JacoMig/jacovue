@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <vue-title title="Jacopo Migliorelli - Frontend Development / Webdesign"></vue-title>
     <header>
       <div class="logo">
        <router-link to="/">
@@ -32,6 +33,7 @@
 
 import Footer from '@/components/Footer.vue'
 import Navigation from '@/components/Navigation.vue'
+
 
 export default {
   components: {

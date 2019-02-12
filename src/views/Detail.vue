@@ -1,5 +1,6 @@
 <template>
     <div>
+        <vue-title :title="infos.title"></vue-title>
         <div class="detail__block" v-if="visible">
             <h1>{{infos.title}}</h1>
             <div class="detail__image">

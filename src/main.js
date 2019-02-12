@@ -3,14 +3,13 @@ import App from './App.vue'
 import router from './router'
 import NProgress from 'nprogress'
 import AOS from 'aos'
-
+import VueTitle from './components/VueTitle.vue';
 import "aos/dist/aos.css"
 import "../src/assets/css/style.scss"
 import '../node_modules/nprogress/nprogress.css'
 
-
 Vue.config.productionTip = false
-/* Vue.use(VueJsonp) */
+Vue.component('vue-title', VueTitle);
 
 router.beforeResolve((to, from, next) => {
   if(to.name) {

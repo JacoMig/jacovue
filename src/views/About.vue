@@ -1,5 +1,6 @@
 <template>
   <div class="about">
+    <vue-title :title="'About'"></vue-title>
     <h1 data-aos="fade-up"><strong>Hello!</strong></h1>
     <div data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out">
       <p>My name is Jacopo I have a Bachelor in visual communication and 7 years of working experience between <strong>frontend/backend</strong> development, screen and graphic design.</p>
@@ -50,3 +51,4 @@
     </div>
   </div>
 </template>
+
