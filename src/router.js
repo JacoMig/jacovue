@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Portfolio from './views/Portfolio.vue'
 import Contact from './views/Contact.vue'
+import Detail from './views/Detail.vue'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/portfolio',
       name: 'portoflio',
       component: Portfolio
+    },
+    {
+      path: '/detail/:id',
+      name: 'detail',
+      component: Detail
     },
     {
       path: '/contact',

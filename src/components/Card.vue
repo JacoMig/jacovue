@@ -10,7 +10,7 @@
             <div class="back card">
                 <h1>{{work.title}}</h1>
                 <div class="post-category">{{work.category.join(', ')}}</div>
-                <router-link to="/works/:id" class="btn">Go to Project</router-link>
+                <router-link v-bind:to="'/detail/'+work.id" class="btn">Go to Project</router-link> 
             </div>    
         </div>   
     </div>

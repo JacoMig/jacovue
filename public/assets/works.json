@@ -10,8 +10,8 @@
             "link" : "https://www.th-brandenburg.de"
         },
         "category": [ "Bootstrap", "Html/Css", "jQuery", "Mobile"], 						 
-        "image" : "assets/img/details/technische-hochschule-brandeburg-detail.jpg",
-        "thumb": "assets/img/thb_home.jpg"
+        "image" : "/assets/img/details/technische-hochschule-brandeburg-detail.jpg",
+        "thumb": "/assets/img/thb_home.jpg"
     },
     {
         "id" : 2,
@@ -23,8 +23,8 @@
             "link" : "http://career.deliveryhero.com/"
         },
         "category": [ "AngularJs", "Html/Css", "jQuery", "Mobile", "PHP", "Wordpress"], 						 
-        "image" : "assets/img/details/dh_detail.jpg",
-        "thumb": "assets/img/deliveryhero_home.jpg"
+        "image" : "/assets/img/details/dh_detail.jpg",
+        "thumb": "/assets/img/deliveryhero_home.jpg"
     },
     {
         "id" : 3,
@@ -36,8 +36,8 @@
             "link" : "http://www.juwelier.at/"
         },
         "category": [ "Bootstrap", "Html/Css", "jQuery", "Mobile", "PHP"], 						 
-        "image" : "assets/img/details/juwelier-at-detail.jpg",
-        "thumb": "assets/img/juwelier_home.jpg"
+        "image" : "/assets/img/details/juwelier-at-detail.jpg",
+        "thumb": "/assets/img/juwelier_home.jpg"
     },
     {
         "id" : 4,
@@ -49,8 +49,8 @@
             "link" : "https://z2x.zeit.de/register"
         },
         "category": [ "Html/Css", "Javascript", "PHP", "Wordpress"], 						 
-        "image" : "assets/img/details/z2x-detail.jpg",
-        "thumb": "assets/img/z2x_home.jpg"
+        "image" : "/assets/img/details/z2x-detail.jpg",
+        "thumb": "/assets/img/z2x_home.jpg"
     },
     {
         "id" : 5,
@@ -62,8 +62,8 @@
             "link" : "http://www.digiden.de/"
         },
         "category": [ "Html/Css", "jQuery", "Typo3" ], 						 
-        "image" : "assets/img/details/digiden_detail.jpg",
-        "thumb": "assets/img/digiden_home.jpg"
+        "image" : "/assets/img/details/digiden_detail.jpg",
+        "thumb": "/assets/img/digiden_home.jpg"
     },
     {
         "id" : 6,
@@ -75,8 +75,8 @@
             "link" : "www.ultras-art.com/"
         },
         "category": [ "Html/Css", "Bootstrap", "jQuery", "Mobile", "Oxid" ], 						 
-        "image" : "assets/img/details/ultras-art-detail.jpg",
-        "thumb": "assets/img/ultras_home.jpg"
+        "image" : "/assets/img/details/ultras-art-detail.jpg",
+        "thumb": "/assets/img/ultras_home.jpg"
     },
     {
         "id" : 7,
@@ -88,8 +88,8 @@
             "link" : "http://www.motioncomposer.com/"
         },
         "category": [ "Html/Css", "Bootstrap", "PHP", "Mobile", "Wordpress" ], 						 
-        "image" : "assets/img/details/mcomposer_detail.jpg",
-        "thumb": "assets/img/mcomposer_home.jpg"
+        "image" : "/assets/img/details/mcomposer_detail.jpg",
+        "thumb": "/assets/img/mcomposer_home.jpg"
     }
         
 ]
