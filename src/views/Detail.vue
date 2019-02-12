@@ -57,6 +57,7 @@ export default {
             this.works =  response.data;
             this.infos = this.works.filter(work => work.id === parseInt(this.id))[0]
             this.visible = true
+            /* this.checkProjectLength(); */
         })
     },
     methods:{
@@ -69,13 +70,29 @@ export default {
             }  
             this.$router.push({ path: '/detail/'+this.id })
         }
+        /* checkProjectLength(){
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            if(this.infos.id == 1){
+                prevBtn.classList.add('disable')
+            }else{
+                prevBtn.classList.remove('disable')
+            }
+            if(this.id == this.works.length){
+                nextBtn.classList.add('disable')
+            }else{
+                nextBtn.classList.remmove('disable')
+            } 
+        } */
     },
     watch:{
         '$route' (to,from){
             if(to.params.id){
                 this.id = to.params.id
                 this.infos = this.works.filter(work => work.id === parseInt(this.id))[0]
+                /* this.checkProjectLength(); */
             }
+           
         }
     }
     

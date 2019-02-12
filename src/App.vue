@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" :class="pathName">
     <vue-title title="Jacopo Migliorelli - Frontend Development / Webdesign"></vue-title>
-    <header>
+    <header v-if="page">
       <div class="logo">
        <router-link to="/">
           <h1>Jacopo</h1>
@@ -25,7 +25,9 @@
         </keep-alive>
       </transition>
     </div>
-    <Footer />
+    <transition name="fade" mode="out-in">
+    <Footer v-if="page"/>
+    </transition>
   </div>
 </template>
 
@@ -36,8 +38,20 @@ import Navigation from '@/components/Navigation.vue'
 
 
 export default {
+  data(){
+    return{
+      pathName : this.$route.name,
+      page: false
+    }
+  },
   components: {
     Footer, Navigation
+  },
+  created(){
+     if(this.pathName === "home")
+     this.page = false
+     else
+     this.page = true
   },
   methods: {
     toggleOpen(event){
@@ -49,8 +63,19 @@ export default {
   },
   watch: {
     '$route' (to, from) {
-       document.querySelector('#nav__mobile').classList.remove('open')
-       document.querySelector('.mobile-toggle').classList.remove('open')
+      this.pathName = to.name
+      if(this.pathName === "home")
+        this.page = false
+      else
+        this.page = true
+      
+      const navMobile = document.querySelector('#nav__mobile');
+      const toggleMobile = document.querySelector('.mobile-toggle');
+      if(navMobile)
+        navMobile.classList.remove('open')
+      if(toggleMobile)
+        toggleMobile.classList.remove('open')
+        
     }
   }
   

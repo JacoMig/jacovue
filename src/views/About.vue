@@ -1,8 +1,11 @@
 <template>
-  <div class="about">
+  <div>
     <vue-title :title="'About'"></vue-title>
-    <h1 data-aos="fade-up"><strong>Hello!</strong></h1>
-    <div data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out">
+    <h1 data-aos="fade-up" data-aos-delay="100"><strong>Hello!</strong></h1>
+    <div class="home__image" data-aos="fade-in" data-aos-delay="300">
+        <img src="assets/img/foto_mia.svg" alt="Jacopo Migliorelli Frontend developer" />
+    </div> 
+    <div data-aos="fade-in" data-aos-offset="100" data-aos-delay="400" data-aos-ease="ease-in-out">
       <p>My name is Jacopo I have a Bachelor in visual communication and 7 years of working experience between <strong>frontend/backend</strong> development, screen and graphic design.</p>
       <p>With a good taste for layouts, graphic&nbsp; and webdesign I love making <em>responsive layouts</em>, programming <em><strong>javascript</strong> features</em> on websites. I’m&nbsp;a&nbsp;<em><strong>Css</strong> expert and love to use <em><strong>Sass/Less</strong></em>.<br>
       </em>I also like <strong>WordPress</strong>. I do <em>customize themes</em> and <em>develop plugins</em> from scratch.</p>
@@ -10,19 +13,19 @@
     <h1 data-aos="fade-up" data-aos-delay="200" data-aos-ease="ease-in-out">Skills</h1>
     <div class="skills" data-aos="fade-in" data-aos-delay="400" data-aos-ease="ease-in-out">
       <div>
-        <h2>Responsive Design</h2>
+        <p>Responsive Design</p>
       </div>
       <div>
-       <h2>Frontend Development</h2>
+       <p>Frontend Development</p>
       </div>
       <div>
-        <h2>WordPress Plugin Development</h2>
+        <p>WordPress Plugin Development</p>
       </div>
       <div>
-        <h2>WordPress Themes Customize</h2>
+        <p>WordPress Themes Customize</p>
       </div>
       <div>
-       <h2>Backend  Development</h2>
+        <p>Backend  Development</p>
       </div>
     </div>
     <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Previous Works Experiences</h1>
@@ -41,7 +44,6 @@
     <div class="codeexamples" data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out" >
       <ul>
         <li>Some coding challanges can be seen at <a href="https://github.com/JacoMig/CodeExperiments">Code Experiments</a></li>
-        <li>Some NodeJs Coding. Writing a basic Backend with functions of creating posts, upload texts and pictures please visit <a href="https://github.com/JacoMig/NodeBackend">NodeBackend on GitHub</a></li>
         <li>You can also have a look to my <a href="https://codepen.io/jaco1981">Codepen profile</a></li>
       </ul>
     </div>

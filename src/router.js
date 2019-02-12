@@ -5,6 +5,8 @@ import About from './views/About.vue'
 import Portfolio from './views/Portfolio.vue'
 import Contact from './views/Contact.vue'
 import Detail from './views/Detail.vue'
+import NotFound from './views/NotFound.vue'
+import Coding from './views/Coding.vue'
 
 
 Vue.use(Router)
@@ -37,6 +39,16 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/coding',
+      name: 'coding',
+      component: Coding
+    },
+    {
+      path: '/404',
+      name: 'notfound',
+      component: NotFound
     }
   ]
 })
