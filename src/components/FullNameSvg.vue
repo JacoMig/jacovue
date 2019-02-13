@@ -1,6 +1,5 @@
 <template>
-    <div class="font__content">
-        <svg version="1.1" id="Fullname" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     <svg version="1.1" id="Fullname" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="600px" height="100px" viewBox="0 0 600 100" enable-background="new 0 0 600 100" xml:space="preserve">
             <g>
                 <path fill="none" stroke="#666666" stroke-miterlimit="10" d="M20.245,72.107c-1.705-0.408-2.988-0.852-3.852-1.332
@@ -101,32 +100,4 @@
                     h4.896v39.6h-4.896V32.398z"/>
             </g>
             </svg> 
-            <div class="home__tagline">
-                Frontend_Developer__Webdesign
-            </div>
-            
-    </div>
 </template>
-
-<script>
-import Vivus from 'vivus'
-
-export default {
-    mounted(){
-        new Vivus('Fullname', {duration: 100,  animTimingFunction: Vivus.EASE}, this.fadeInDesc);
-    },
-    methods:{
-        fadeInDesc(){
-            const that = this
-            const homeTagLine = document.querySelector('.home__tagline');
-            homeTagLine.classList.add('animate')
-            homeTagLine.addEventListener('transitionend', function(){
-               setTimeout(() => {
-                    that.$router.push({path : '/about'})    
-               }, 1000);
-               
-            })
-        }
-    }
-}
-</script>

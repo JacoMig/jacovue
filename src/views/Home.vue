@@ -1,13 +1,13 @@
 <template>
-  <FontSvg />
+  <HomeContent />
 </template>
 
 <script>
-import FontSvg from '../components/FontSvg.vue'
+import HomeContent from '../components/HomeContent.vue'
 
 export default {
   components:{
-    FontSvg
+    HomeContent
   }
   
 }

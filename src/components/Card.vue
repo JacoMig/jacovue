@@ -19,6 +19,12 @@
  export default {
     props:{
         work : Object
+    },
+    methods:{
+        rotateCard(event){
+            event.target.classList.toggle('rotate')
+            console.log(event.target)
+        }
     }
  }
  </script>

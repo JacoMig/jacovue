@@ -1,54 +1,59 @@
 <template>
-    <div class="form">
-        <vue-title :title="'Contact'"></vue-title>
-        <div>
-            <input
-            id="name"
-            v-model="name"
-            class="form__field"
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            v-bind:class="[hasError.name ? 'text-danger' : '']"
-            >
+    <div>
+         <vue-title :title="'Contact'"></vue-title>
+        <div class="form__notification" v-bind:class="[formSent ? 'visible' : '']">
+            <h2>Thank you!<br>Your message has been sent.</h2>
         </div>
+        <div class="form">
+            <div>
+                <input
+                id="name"
+                v-model="name"
+                class="form__field"
+                type="text"
+                name="name"
+                v-bind:placeholder="placeholders.name"
+                v-bind:class="[hasError.name ? 'text-danger' : '']"
+                >
+            </div>
 
-        <div>
-            <input
-            id="email"
-            v-model="email"
-            class="form__field"
-            type="email"
-            name="email"
-            placeholder="YourEmail@domain.com"
-            v-bind:class="[hasError.email ? 'text-danger' : '']"
-            >
-        </div>
+            <div>
+                <input
+                id="email"
+                v-model="email"
+                class="form__field"
+                type="email"
+                name="email"
+                :placeholder="placeholders.email"
+                v-bind:class="[hasError.email ? 'text-danger' : '']"
+                >
+            </div>
 
-        <div>
-            <input
-            id="subject"
-            v-model="subject"
-            class="form__field"
-            type="text"
-            name="subject"
-            placeholder="Your Subject"
-            v-bind:class="[hasError.subject ? 'text-danger' : '']"
-            >
-        </div>
+            <div>
+                <input
+                id="subject"
+                v-model="subject"
+                class="form__field"
+                type="text"
+                name="subject"
+                :placeholder="placeholders.subject"
+                v-bind:class="[hasError.subject ? 'text-danger' : '']"
+                >
+            </div>
 
-         <div>
-            <textarea
-            id="Message"
-            class="form__field"
-            v-model="message"
-            name="message"
-            placeholder="Your Message"
-            ></textarea>
-        </div>
+            <div>
+                <textarea
+                id="Message"
+                class="form__field"
+                v-model="message"
+                name="message"
+                :placeholder="placeholders.message"
+                ></textarea>
+            </div>
 
-        <div>
-            <button class="btn" @click="checkForm">Send</button> 
+            <div>
+                <button class="btn" @click="checkForm">Send</button> 
+            </div>
         </div>
     </div>
 </template>
@@ -61,6 +66,7 @@ export default {
     data(){
         return {
             errors: [],
+            placeholders:{name : "Your Name", email: "YourEmail@domain.com", subject:"Subject", message: "Your Message"},
             name: null,
             email: null,
             subject: null,
@@ -69,7 +75,8 @@ export default {
                 'name' : false,
                 'email' : false,
                 'subject' : false
-            }
+            },
+            formSent: false
         }
     },
     methods: {
@@ -80,23 +87,28 @@ export default {
             }
             if(!this.name){
                 this.errors.push('Name required!');
-                this.name = 'Name required!';
+                this.placeholders.name = 'Name required!';
                 this.hasError.name = true
+            }else{
+                this.hasError.name = false
             }
             if (!this.email) {
                 this.errors.push('Email required!');
-                this.email = 'Email required!';
+                this.placeholders.email = 'Email required!';
                 this.hasError.email = true
-                
             } else if (!this.validEmail(this.email)) {
                 this.errors.push('Valid email required!');
                 this.email = 'Valid Email required!';
                 this.hasError.email = true
+            }else{
+                this.hasError.email = false
             }
             if(!this.subject){
                 this.errors.push('Subject required!');
-                this.subject = 'Subject required!';
+                this.placeholders.subject = 'Subject required!';
                 this.hasError.subject = true
+            }else{
+                this.hasError.subject = false
             }
 
             if (!this.errors.length) {
@@ -114,18 +126,30 @@ export default {
             return re.test(email);
         },
         sendForm(){
-            console.log('Success');
-            var formData = new FormData(document.querySelector('.form'))
+            console.log('Sending Form');
             
-            /* for (var key of formdata.entries()) { console.log(key[0] + ', ' + key[1]) } */
-            
-            axios.post('http://jacopomigliorelli.com/files/axios_req/php/sendmail.php', formData, {
+            var formData = new FormData()
+            formData.append('name', this.name)
+            formData.append('email', this.email)
+            formData.append('subject', this.subject)
+            formData.append('message', this.message)
+
+            for (var pair of formData.entries())
+            {
+             console.log(pair[0]+ ' : '+ pair[1]); 
+            } 
+            axios.post('./php/sendmail.php', formData, {
                 headers: {
                     'X-Requested-With': 'XMLHttpRequest'
                 },
                 withCredentials : false
             })
-            .then(resp => console.log(resp)) 
+            .then(resp => {
+                this.formSent = true
+                window.scrollTo(0,0)
+                
+                console.log(resp.data)
+            }) 
             .catch(function(res) {
                 if(res instanceof Error) {
                 console.log(res.message);

@@ -2,7 +2,7 @@
   <div>
     <vue-title :title="'About'"></vue-title>
     <h1 data-aos="fade-up" data-aos-delay="100"><strong>Hello!</strong></h1>
-    <div class="home__image" data-aos="fade-in" data-aos-delay="300">
+    <div class="about__image" data-aos="fade-in" data-aos-delay="300">
         <img src="assets/img/foto_mia.svg" alt="Jacopo Migliorelli Frontend developer" />
     </div> 
     <div data-aos="fade-in" data-aos-offset="100" data-aos-delay="400" data-aos-ease="ease-in-out">
