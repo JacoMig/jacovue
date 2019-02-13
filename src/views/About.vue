@@ -43,13 +43,13 @@
     <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Code Examples</h1>
     <div class="codeexamples" data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out" >
       <ul>
-        <li>Some coding challanges can be seen at <a href="https://github.com/JacoMig/CodeExperiments">Code Experiments</a></li>
-        <li>You can also have a look to my <a href="https://codepen.io/jaco1981">Codepen profile</a></li>
+        <li>Some coding challanges can be seen at <a href="https://github.com/JacoMig/CodeExperiments" target="_blank">Code Experiments</a></li>
+        <li>You can also have a look to my <a href="https://codepen.io/jaco1981" target="_blank">Codepen profile</a></li>
       </ul>
     </div>
     <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Resume – CV</h1>
     <div data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out">
-      <p><a href="http://jacopomigliorelli.com/files/J.Migliorelli_CV.pdf">Download my CV right here</a></p>
+      <p><a href="./files/J.Migliorelli_CV.pdf" target="_blank">Download my CV right here</a></p>
     </div>
   </div>
 </template>

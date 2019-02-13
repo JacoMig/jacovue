@@ -29,7 +29,7 @@ export default {
                setTimeout(() => {
                     /* that.$router.push({path : '/about'})     */
                     that.redirect();
-               }, 2000); 
+               }, 1000); 
                
             })
         },
