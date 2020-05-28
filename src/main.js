@@ -5,8 +5,8 @@ import NProgress from 'nprogress'
 import AOS from 'aos'
 import VueTitle from './components/VueTitle.vue';
 import "aos/dist/aos.css"
-import "../src/assets/css/style.scss"
 import '../node_modules/nprogress/nprogress.css'
+import "../src/assets/css/style.scss"
 
 Vue.config.productionTip = false
 Vue.component('vue-title', VueTitle);
