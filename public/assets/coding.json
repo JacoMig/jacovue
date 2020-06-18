@@ -1,0 +1,30 @@
+[
+
+    {
+        "id" : 1,
+        "title": "Drum machine",
+        "description" : "Step Sequencer made with <span>React</span> and <span>Tonejs</span>",
+        "link" : "https://jacomig.github.io/drum-machine/",
+        "repo": "https://github.com/JacoMig/drum-machine",
+        "category": [ "React", "Tonejs" ], 						 
+        "image" : "/assets/img/drum-machine.png"
+    },
+    {
+        "id" : 2,
+        "title": "Paddle Game",
+        "description" : "A basic paddle game made with <span>React</span> and <span>Matterjs</span>",
+        "link" : "https://jacomig.github.io/react-paddle-game/",
+        "repo": "https://github.com/JacoMig/react-paddle-game",
+        "category": [ "React", "Matterjs" ], 						 
+        "image" : "/assets/img/paddle-game.png"
+    },
+    {
+        "id" : 3,
+        "title": "Space Invaders",
+        "description" : "A basic space invaders made with <span>React</span>",
+        "link" : "https://jacomig.github.io/react-space-invaders/",
+        "repo": "https://github.com/JacoMig/react-space-invaders",
+        "category": [ "React" ], 						 
+        "image" : "/assets/img/space-invaders.png"
+    }
+]

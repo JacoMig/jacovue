@@ -172,6 +172,7 @@ header, .content{
     height: $heightCardMobile;
 }
 
+
 @media only screen and (min-width: 480px) {
 	.card-main,
 	.front,
@@ -315,6 +316,9 @@ textarea {
                 font-size:1.5em;
                 margin: 2em 0;
             }
+            
+        }
+        .resources{
             ul{
                 
                 li{
@@ -322,6 +326,22 @@ textarea {
                     &:not(:last-child){
                         margin-right:2em;
                     }
+                }
+            }
+        }
+        .projects {
+            li {
+                display: flex;
+                justify-content: space-between;
+                margin: 40px 0;
+                img {
+                    width: 70%;
+                }
+                span {
+                    font-weight: bold;
+                }
+                > div {
+                    width: 80%;
                 }
             }
         }

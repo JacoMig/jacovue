@@ -3,7 +3,7 @@
     <vue-title :title="'About'"></vue-title>
     <h1 data-aos="fade-up" data-aos-delay="100"><strong>Hello!</strong></h1>
     <div class="about__image" data-aos="fade-in" data-aos-delay="300">
-        <img src="assets/img/foto_mia.svg" alt="Jacopo Migliorelli Frontend developer" />
+        <img v-bind:src="'assets/img/foto_mia.svg'" alt="Jacopo Migliorelli Frontend developer" />
     </div> 
     <div data-aos="fade-in" data-aos-offset="100" data-aos-delay="400" data-aos-ease="ease-in-out">
       <p>My name is Jacopo I have a Bachelor in visual communication and 9 years of working experience between <strong>frontend/backend</strong> development, screen and graphic design.</p>
@@ -41,13 +41,13 @@
       <p>02.2013 – 01.2014 <em>Frontend Developer</em> @&nbsp;Artistdock UG Berlin, DesignerDock Berlin</p>
       <p>04.2009 – 10.2012 <em>Screendesigner / Front End Developer</em> @ Digiden GmbH, Berlin</p>
     </div>
-    <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Code Examples</h1>
+   <!--  <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Code Examples</h1>
     <div class="codeexamples" data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out" >
       <ul>
         <li>Some coding challanges can be seen at <a href="https://github.com/JacoMig?tab=repositories" target="_blank">My Repositories</a></li>
         <li>You can also have a look to my <a href="https://codepen.io/jaco1981" target="_blank">Codepen profile</a></li>
       </ul>
-    </div>
+    </div> -->
     <h1 data-aos="fade-up" data-aos-ease="ease-in-out">Resume – CV</h1>
     <div data-aos="fade-in" data-aos-delay="200" data-aos-ease="ease-in-out">
       <p><a href="./files/J.Migliorelli_CV.pdf" target="_blank">Download my CV right here</a></p>
