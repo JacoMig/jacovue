@@ -2,6 +2,15 @@
 
     {
         "id" : 1,
+        "title": "A Matrix Touch Sound",
+        "description" : "Simple touch synthesizer made with <span>React</span>,<span>Tonejs</span> and <span>Three js</span>",
+        "link" : "https://jacomig.github.io/matrix-sound/",
+        "repo": "https://github.com/JacoMig/matrix-sound",
+        "category": [ "React", "Tonejs", "Threejs" ], 						 
+        "image" : "/assets/img/matrix-sound.png"
+    },
+    {
+        "id" : 2,
         "title": "Drum machine",
         "description" : "Step Sequencer made with <span>React</span> and <span>Tonejs</span>",
         "link" : "https://jacomig.github.io/drum-machine/",
@@ -10,7 +19,7 @@
         "image" : "/assets/img/drum-machine.png"
     },
     {
-        "id" : 2,
+        "id" : 3,
         "title": "Paddle Game",
         "description" : "A basic paddle game made with <span>React</span> and <span>Matterjs</span>",
         "link" : "https://jacomig.github.io/react-paddle-game/",
@@ -19,7 +28,7 @@
         "image" : "/assets/img/paddle-game.png"
     },
     {
-        "id" : 3,
+        "id" : 4,
         "title": "Space Invaders",
         "description" : "A basic space invaders made with <span>React</span>",
         "link" : "https://jacomig.github.io/react-space-invaders/",
