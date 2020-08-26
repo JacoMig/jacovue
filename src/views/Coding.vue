@@ -2,7 +2,6 @@
     <div>
        <vue-title :title="'Coding'"></vue-title>
         <h1>Coding</h1>				
-        <p>Experiments</p>
         <div class="projects">
             <ul>
                 <li v-for="project in projects"  v-bind:key="project.id">
