@@ -1,7 +1,7 @@
 <template>
     <div>
        <vue-title :title="'Coding'"></vue-title>
-        <h1>Coding</h1>				
+        <h1>Coding xxx</h1>				
         <div class="projects">
             <ul>
                 <li v-for="project in projects"  v-bind:key="project.id">
