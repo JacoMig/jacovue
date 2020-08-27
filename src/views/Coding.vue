@@ -1,13 +1,13 @@
 <template>
     <div>
        <vue-title :title="'Coding'"></vue-title>
-        <h1>Coding xxx</h1>				
+        <h1>Coding</h1>				
         <div class="projects">
             <ul>
                 <li v-for="project in projects"  v-bind:key="project.id">
                     <a v-bind:href="project.link"  target="_blank">
-                        <div class="img-container">
-                            <img v-bind:src="project.image" v-bind:alt="project.title">
+                        <div class="img-container" v-bind:style="{ 'background-image':'url('+project.image+')'}">
+                           <!--  <img v-bind:src="project.image" v-bind:alt="project.title"> -->
                         </div>
                     </a>
                     <div>

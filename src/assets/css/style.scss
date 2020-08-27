@@ -314,7 +314,7 @@ textarea {
             text-align:center;
             p{
                 font-size:1.5em;
-                margin: 2em 0;
+                margin: 1em 0 0;
             }
             
         }
@@ -331,18 +331,26 @@ textarea {
         }
         .projects {
             li {
-                display: flex;
-                justify-content: space-between;
+               /*  display: flex;
+                justify-content: space-between; */
                 margin: 40px 0;
-                img {
-                    width: 70%;
+                /* img {
+                    width: 40%;
+                } */
+                .img-container {
+                    width: 80%;
+                    height: 200px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    display: block;
+                    margin: 0 auto;
                 }
                 span {
                     font-weight: bold;
                 }
-                > div {
+                /* > div {
                     width: 80%;
-                }
+                } */
             }
         }
     }
