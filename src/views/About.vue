@@ -1,14 +1,14 @@
 <template>
   <div>
-    <vue-title :title="'About'"></vue-title>
+    
     <h1 data-aos="fade-up" data-aos-delay="100"><strong>Hello!</strong></h1>
     <div class="about__image" data-aos="fade-in" data-aos-delay="300">
         <img v-bind:src="'assets/img/foto_mia.svg'" alt="Jacopo Migliorelli Frontend developer" />
     </div> 
     <div data-aos="fade-in" data-aos-offset="100" data-aos-delay="400" data-aos-ease="ease-in-out">
       <p>My name is Jacopo I have a Bachelor in visual communication and 9 years of working experience between <strong>frontend/backend</strong> development, screen and graphic design.</p>
-      <p>With a good taste for layouts, graphic&nbsp; and webdesign I love making <em>responsive layouts</em>, programming <em><strong>javascript</strong> features</em> on websites. I’m&nbsp;a&nbsp;<em><strong>Css</strong> expert and love to use <em><strong>Sass/Less</strong></em>.<br>
-      </em>I also like <strong>WordPress</strong>. I do <em>customize themes</em> and <em>develop plugins</em> from scratch.</p>
+      <p>With a good taste for layouts, graphic&nbsp; and webdesign I love to make <em> reusable React components, responsive layouts</em>, working on <em>business logic</em> for web apps, and of course I love <em><strong>vanilla javascript</strong> features</em>. I’m&nbsp;a&nbsp;<em><strong>Css</strong> expert and love to use <em><strong>Sass/Less</strong></em>.<br>
+      </em>I also did use <strong>WordPress</strong> quite a lot. I do <em>customize themes</em> and <em>develop plugins</em> from scratch.</p>
     </div>
     <h1 data-aos="fade-up" data-aos-delay="200" data-aos-ease="ease-in-out">Skills</h1>
     <div class="skills" data-aos="fade-in" data-aos-delay="400" data-aos-ease="ease-in-out">

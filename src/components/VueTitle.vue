@@ -2,16 +2,17 @@
     export default {
         name: 'vue-title',
         props: ['title'],
-        created () {
-             document.title = this.title+' - Jacopo Migliorelli - Frontend Development / Webdesign';
-        },
         watch: {
-            title () {
-                // only used when the title changes after page load
-                document.title = this.title+' - Jacopo Migliorelli - Frontend Development / Webdesign';
+            title: {
+                immediate: true,
+                handler() {
+                    document.title = this.title+' - Jacopo Migliorelli - Frontend Development / Webdesign';
+                    // console.log(title)
+                }
             }
         },
         render () {
-        }
+        },
     }
 </script>
+       

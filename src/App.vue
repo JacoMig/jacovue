@@ -68,7 +68,7 @@ export default {
         this.page = false
       else
         this.page = true
-      
+      document.title = to.name.charAt(0).toUpperCase()+ to.name.substring(1)+' - Jacopo Migliorelli - Frontend Development / Webdesign';
       const navMobile = document.querySelector('#nav__mobile');
       const toggleMobile = document.querySelector('.mobile-toggle');
       if(navMobile)

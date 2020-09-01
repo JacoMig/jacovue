@@ -1,6 +1,6 @@
 <template>
     <div>
-         <vue-title :title="'Contact'"></vue-title>
+         
         <div class="form__notification" v-bind:class="[formSent ? 'visible' : '']">
             <h2>Thank you!<br>Your message has been sent.</h2>
         </div>

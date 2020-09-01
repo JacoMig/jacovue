@@ -1,6 +1,6 @@
 <template>
     <div>
-       <vue-title :title="'Coding'"></vue-title>
+      
         <h1>Coding</h1>				
         <div class="projects">
             <ul>
